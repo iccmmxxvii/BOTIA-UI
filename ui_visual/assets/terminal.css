@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #0a0f0a;
+  --panel: #101710;
+  --text: #d2f9d2;
+  --muted: #7dad7d;
+  --accent: #72ff72;
+  --warn: #ffcf6f;
+}
+
+html, body, [class*="css"] {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  border: 1px solid #1b2c1b;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, #111 0%, #0b120b 100%);
+  box-shadow: 0 0 20px rgba(114,255,114,0.08);
+}
+
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; border: 1px solid; }
+.badge.ok { color: #8dff8d; border-color: #2f6e2f; }
+.badge.warn { color: var(--warn); border-color: #705c2d; }
+.dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#72ff72; box-shadow:0 0 6px #72ff72; margin-right:4px; }
+
+.footer {
+  border-top: 1px solid #1f2f1f;
+  margin-top: 16px;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.crt-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.01),
+    rgba(255,255,255,0.01) 1px,
+    rgba(0,0,0,0.12) 2px,
+    rgba(0,0,0,0.12) 3px
+  );
+}
